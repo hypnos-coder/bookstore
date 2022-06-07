@@ -16,6 +16,7 @@ public class LoginForm extends JDialog {
     private JPanel main;
 
     public LoginForm(JFrame parent){
+        // build of box
         super(parent);
         setTitle("Login");
         setMinimumSize(new Dimension(450, 474));
@@ -28,12 +29,15 @@ public class LoginForm extends JDialog {
 
         signInButton.addActionListener(new ActionListener() {
             @Override
+            // this is what actually athenticates
             public void actionPerformed(ActionEvent e) {
                 Authentification authentification = new Authentification();
+                //username var is stored into username "box' on J test for username and same with password
                 String usernamevar = username.getText();
                 String passwordvar = String.valueOf(password.getPassword());
 
-                try {
+
+                try { // overrides any exeptions that are thrown
                     boolean logined = authentification.login(usernamevar,passwordvar);
                 } catch (SQLException ex) {
                     throw new RuntimeException(ex);
