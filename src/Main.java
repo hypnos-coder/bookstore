@@ -7,8 +7,10 @@ public class Main {
         //LoginForm loginForm = new LoginForm(null);
         Authentification authentification = new Authentification();
         //boolean test = authentification.login("amen","merbelle");
-        String test = authentification.register("hafsa9","hafsabadullahi1@gmail.com","password123","password123", "6123091958");
-        System.out.print(test);
+        //String test = authentification.register("hafsa9","hafsabadullahi1@gmail.com","password123","password123", "6123091958");
+        //System.out.print(test);
+        RegistrationForm registrationForm = new RegistrationForm(null);
+        registrationForm.setVisible(true);
 
     }
 }
