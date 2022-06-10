@@ -1,18 +1,12 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
 
 public class LoginForm extends JDialog {
     private JTextField tfEmail;
     private JPasswordField pfPassword;
-    private JButton btnOk;
     private JButton btnCancel;
     private JPanel loginPanel;
+    private JButton okButton;
 
     public LoginForm(JFrame parent) {
         super(parent);
@@ -49,7 +43,7 @@ public class LoginForm extends JDialog {
                         JOptionPane.ERROR_MESSAGE);
             }
         } */
-    btnOk.addActionListener(new ActionListener() { } );}
+}
 
     public static void main(String[] args) {
         LoginForm loginForm = new LoginForm(null);
