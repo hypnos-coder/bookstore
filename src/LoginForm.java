@@ -6,7 +6,7 @@ public class LoginForm extends JDialog {
     private JPasswordField pfPassword;
     private JButton btnCancel;
     private JPanel loginPanel;
-    private JButton okButton;
+    private JButton btnOK;
 
     public LoginForm(JFrame parent) {
         super(parent);
