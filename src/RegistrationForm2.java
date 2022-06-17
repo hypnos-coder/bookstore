@@ -42,7 +42,7 @@ public class RegistrationForm2 extends  JDialog {
 
                 Authentification authentification = new Authentification();
                 try {
-                     message = authentification.register(Usernamevar,Emailvar,Passwordvar,PasswordCvar,PhoneNumvar);
+                     message = authentification.register(Usernamevar,Emailvar,Passwordvar,PasswordCvar,PhoneNumvar,"grr");
                 } catch (SQLException ex) {
                     throw new RuntimeException(ex);
                 } catch (ClassNotFoundException ex) {

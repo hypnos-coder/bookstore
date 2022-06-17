@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class landingPageForms extends  JDialog{
+public class landingPageForm extends  JDialog{
     private JTextField textField1;
     private JButton contactUsButton;
     private JComboBox comboBox1;
@@ -10,7 +10,7 @@ public class landingPageForms extends  JDialog{
     private JPanel aside;
     private JPanel bookPanel;
 
-    public landingPageForms(JFrame parent){
+    public landingPageForm(JFrame parent){
         super(parent);
         setTitle("Login");
         setMinimumSize(new Dimension(450, 474));
@@ -18,6 +18,7 @@ public class landingPageForms extends  JDialog{
         setLocationRelativeTo(parent);
         setContentPane(mainPanel);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+
 
     }
 }

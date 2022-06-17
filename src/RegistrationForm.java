@@ -1,11 +1,12 @@
+import landingPage.landingPageForms;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.Statement;
+import java.sql.*;
+
+
 
 public class RegistrationForm extends JDialog {
     private JTextField tfUsername;
@@ -34,7 +35,37 @@ public class RegistrationForm extends JDialog {
         btnRegister.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //registerUser();
+                String Usernamevar = tfUsername.getText();
+                String Emailvar = tfEmail.getText();
+                String PhoneNumvar =tfPhoneNumber.getText();
+                String Passwordvar = String.valueOf(pfPassword.getPassword());
+                String PasswordCvar = String.valueOf(pfPasswordConfirmation.getPassword());
+                String Mailingadressvar = tfMailingAddress.getText();
+                String message;
+
+                Authentification authentification = new Authentification();
+                try {
+                    if (Usernamevar.isEmpty() || Emailvar.isEmpty() ||
+                            PhoneNumvar.isEmpty() ||Passwordvar.isEmpty() ||
+                            PasswordCvar.isEmpty() || Mailingadressvar.isEmpty()){
+                        message = "All field are required";
+
+                    }else {
+                        message = authentification.register(Usernamevar, Emailvar, Passwordvar, PasswordCvar, PhoneNumvar, Mailingadressvar);
+                    }
+                } catch (SQLException ex) {
+                    throw new RuntimeException(ex);
+                } catch (ClassNotFoundException ex) {
+                    throw new RuntimeException(ex);
+                }
+
+                if(!message.equals("successfully registered")){
+                    JOptionPane.showMessageDialog(parent, message);
+                    return;
+                }
+                //landingPageForms land = new landingPageForms(null);
+                LoginForm loginForm = new LoginForm(null);
+                dispose();
             }
         });
         btnCancel.addActionListener(new ActionListener() {
@@ -44,100 +75,11 @@ public class RegistrationForm extends JDialog {
             }
         });
 
-        setVisible(true);
+
     }
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
     }
 
- /*   private void registerUser() {
-        String Username = tfUsername.getText();
-        String Password = String.valueOf(pfPassword.getPassword());
-        String PasswordConfirmation = String.valueOf(pfPasswordConfirmation.getPassword());
-        String PhoneNumber = tfPhoneNumber.getText();
-        String Email = tfEmail.getText();
-        String MailingAddress = tfMailingAddress.getText();
-
-        if (Username.isEmpty() || Password.isEmpty() || PasswordConfirmation.isEmpty() || PhoneNumber.isEmpty() || Email.isEmpty() || MailingAddress.isEmpty()) {
-            ;
-        JOptionPane.showMessageDialog(this,
-                "Please Enter All Fields,",
-                "Try Again,",
-                JOptionPane.ERROR_MESSAGE);
-        return;
-    }
-        if(!Password.equals(PasswordConfirmation)) {
-        JOptionPane.showMessageDialog(this,
-                "Passwords Do Not Match",
-                "Try Again",
-                JOptionPane.ERROR_MESSAGE);
-        return;
-
-    }
-       user = addUserToDatabase(Username, Password, PhoneNumber, Email, MailingAddress);
-        if (user != null) {
-            dispose();
-        }
-        else {
-            JOptionPane.showMessageDialog(this,
-                    "Failed to Register",
-                    "Try Again",
-                    JOptionPane.ERROR_MESSAGE );
-        }
-}
-public User user;
-    private User addUserToDatabase(String Username, String Password, String PhoneNumber, String Email, String MailingAddress) {
-        User user = null;
-        final String DB_URL = "jdbc:mysql://localhost/MyStore?serverTimezone=UTC";
-        final String USERNAME = "root";
-        final String PASSWORD = "";
-
-        try{
-            Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
-            // connected to database successfully...
-
-            Statement stmt = conn.createStatement();
-            String sql = "INSERT INTO users (Username, Password, PhoneNumber, Email, MailingAddress)" +
-                    "VALUES (?, ?, ?, ?, ?)";
-            PreparedStatement preparedStatement = conn.prepareStatement(sql);
-            preparedStatement.setString(1, Username);
-            preparedStatement.setString(2, Password);
-            preparedStatement.setString(3, PhoneNumber);
-            preparedStatement.setString(4, Email);
-            preparedStatement.setString(5, MailingAddress);
-
-            //Insert row into the table
-            int addedRows = preparedStatement.executeUpdate();
-            if (addedRows > 0) {
-                user = new User();
-                user.Email = Email;
-                user.Username = USERNAME;
-                user.Password = PASSWORD;
-                user.PhoneNumber = PhoneNumber;
-                user.MaillingAddress = MailingAddress;
-            }
-
-            stmt.close();
-            conn.close();
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        return user;
-    }
-
-    public static void main(String[] args) {
-        RegistrationForm myform = new RegistrationForm(null);
-        User user = myform.user;
-        if (user != null) {
-            System.out.println("Successful Registration of: " + user.Username);
-        }
-        else {
-            System.out.println("Registration Canceled");
-        }
-    }
-
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
-    }*/
 }
