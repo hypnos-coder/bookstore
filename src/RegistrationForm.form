@@ -157,7 +157,7 @@
         </constraints>
         <properties>
           <background color="-5797249"/>
-          <font name="Gabriola" size="73" style="2"/>
+          <font name="Georgia" size="73" style="0"/>
           <icon value="src/books-removebg-preview.png"/>
           <text value="Register"/>
         </properties>
