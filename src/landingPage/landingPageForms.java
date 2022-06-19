@@ -38,8 +38,9 @@ public class landingPageForms extends JDialog{
 
     public landingPageForms(JFrame parent) {
         super(parent);
-        setTitle("Login");
-        setMinimumSize(new Dimension(800, 600));
+        setTitle("Home Page");
+        setMinimumSize(new Dimension(1400, 800));
+        //setModal(true);
         setVisible(true);
         setLocationRelativeTo(parent);
         setContentPane(mainPanel);
