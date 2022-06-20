@@ -4,37 +4,41 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 import java.sql.SQLException;
 
-public class LoginForm extends JDialog {
-    private JTextField tfEmail_username;
-    private JPasswordField pfPassword;
-    private JButton btnCancel;
-    private JPanel loginPanel;
-    private JButton btnOK;
+public class Login extends JDialog{
+    private JPanel signinpanel;
+    private JPanel head;
+    private JLabel headlabel;
+    private JTextField pfusername_email;
+    private JPasswordField tfpassword;
+    private JLabel password;
+    private JLabel username_email;
     private JLabel link;
+    private JButton okButton;
+    private JButton cancelButton;
+    private JPanel body;
+    private JPanel main;
+    private JPanel buttonfield;
 
-    public LoginForm(JFrame parent) {
-
+    public Login(JFrame parent){
         super(parent);
-        //System.out.println("here");
-        setTitle("Login");
-        setContentPane(loginPanel);
-        setMinimumSize(new Dimension(450, 474));
+        setTitle("Create A New Account");
+        setContentPane(signinpanel);
+        //setPreferredSize(new Dimension(800, 800));
+        setMinimumSize(new Dimension(400, 400));
+        setVisible(true);
         setModal(true);
         setLocationRelativeTo(parent);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-        setVisible(true);
 
-        btnOK.addActionListener(new ActionListener() {
 
+        okButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("here");
-                String passwordvar = String.valueOf(pfPassword.getPassword());
-                String usernamevar = tfEmail_username.getText();
+                String passwordvar = String.valueOf(tfpassword.getPassword());
+                String usernamevar = pfusername_email.getText();
                 String message = "";
 
                 Authentification authentification = new Authentification();
@@ -58,21 +62,16 @@ public class LoginForm extends JDialog {
                 landingPageForms land = new landingPageForms(null);
                 dispose();
             }
-        });
 
-        btnCancel.addActionListener(new ActionListener() {
+
+        });
+        cancelButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("here");
-            }
-        });
-        link.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
-                System.out.println("here");
-            }
-        });
-    }
+                dispose();
 
+            }
+        });
+
+    }
 }

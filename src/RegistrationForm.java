@@ -19,6 +19,7 @@ public class RegistrationForm extends JDialog {
     private JButton btnCancel;
     private JLabel head;
     private JPanel RegisterPanel;
+    private JLabel link;
 
     public RegistrationForm(JFrame parent) {
         super(parent);
@@ -64,7 +65,7 @@ public class RegistrationForm extends JDialog {
                     return;
                 }
                 //landingPageForms land = new landingPageForms(null);
-                LoginForm loginForm = new LoginForm(null);
+                Login loginForm = new Login(null);
                 dispose();
             }
         });

@@ -1,5 +1,5 @@
 import javax.crypto.Cipher;
-import javax.crypto.NoSuchPaddingException;
+
 import java.security.*;
 import java.sql.*;
 
@@ -34,32 +34,32 @@ public class Authentification {
     }
     public Connection Connexion() throws SQLException, ClassNotFoundException {
         Class.forName("com.mysql.cj.jdbc.Driver");
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/college","root","merbelle");
 
 
-        return connection;
+        return DriverManager.getConnection("jdbc:mysql://localhost:3306/college","root","merbelle");
         // return 'statement to execute querry
     }
     //this checks checks if the ifo that the user entered is in the database
-    public boolean login(String username,String password) throws SQLException, ClassNotFoundException {
+    public String login(String username_email, String password) throws SQLException, ClassNotFoundException {
         Connection connection =  Connexion();
         // it runs and views the information
         // we used a prepared statement
-        // we used "?" in place of constant for user name and password,
-        // "?' 1 calls username , "?" calls password
-        //no need to call querry in result when using a
-        String query = "select * from userdb where username = ? and password = ? ";
+        // we used "?" in place of constant for username and password,
+        // "?' 1 calls username_email , "?" calls password
+        //no need to call query in result when using a
+        String query = "select * from userdb where useremail = ? or username = ? and userpassword = ?";
         PreparedStatement statement = connection.prepareStatement(query);
-        statement.setString(1,username);
-        statement.setString(2,password);
+        statement.setString(1,username_email);
+        statement.setString(2,username_email);
+        statement.setString(3,password);
 /// no need to call query when using prepared statement
         ResultSet resultSet = statement.executeQuery();
-        // if statement that checks if the user is registered and returns true if username and password match
+        // if statement that checks if the user is registered and returns true if username_email and password match
         // it returns an error if the information doesnt match or exist
-        if (resultSet.next() ){
-            return true;
+        if (resultSet.next()){
+            return "success";
         }
-        return false;
+        return "bad credential";
     }
 
     public String register( String Username,String  Email, String Password, String PasswordConfirmation, String PhoneNumber, String MailingAdress ) throws SQLException, ClassNotFoundException {

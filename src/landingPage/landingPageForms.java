@@ -35,6 +35,7 @@ public class landingPageForms extends JDialog{
     private JLabel searchicon;
     private JLabel Abouticon;
     private JLabel abouticon;
+    private JLabel book6icon;
 
     public landingPageForms(JFrame parent) {
         super(parent);
