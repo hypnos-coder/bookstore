@@ -65,7 +65,7 @@ public class RegistrationForm extends JDialog {
                     return;
                 }
                 //landingPageForms land = new landingPageForms(null);
-                LoginForm loginForm = new LoginForm(null);
+                Login loginForm = new Login(null);
                 dispose();
             }
         });
