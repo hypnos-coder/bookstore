@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.sql.SQLException;
 
 public class Login extends JDialog{
@@ -26,7 +28,7 @@ public class Login extends JDialog{
         setTitle("Create A New Account");
         setContentPane(signinpanel);
         //setPreferredSize(new Dimension(800, 800));
-        setMinimumSize(new Dimension(400, 400));
+        setMinimumSize(new Dimension(600, 400));
         setVisible(true);
         setModal(true);
         setLocationRelativeTo(parent);
@@ -59,8 +61,9 @@ public class Login extends JDialog{
                     JOptionPane.showMessageDialog(parent, message);
                     return;
                 }
-                landingPageForms land = new landingPageForms(null);
                 dispose();
+                landingPageForms land = new landingPageForms(null);
+
             }
 
 
@@ -73,5 +76,15 @@ public class Login extends JDialog{
             }
         });
 
+        link.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                dispose();
+                RegistrationForm registrationForm = new RegistrationForm(null);
+                registrationForm.setVisible(true);
+
+            }
+        });
     }
 }

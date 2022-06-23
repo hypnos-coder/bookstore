@@ -4,6 +4,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.sql.*;
 
 
@@ -26,8 +31,8 @@ public class RegistrationForm extends JDialog {
         setTitle("Create A New Account");
         setContentPane(RegisterPanel);
         //setPreferredSize(new Dimension(800, 800));
-        setMinimumSize(new Dimension(800, 800));
-        setMaximumSize(new Dimension(800, 800));
+        setMinimumSize(new Dimension(900, 800));
+
         setModal(true);
         setLocationRelativeTo(parent);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
@@ -64,7 +69,30 @@ public class RegistrationForm extends JDialog {
                     JOptionPane.showMessageDialog(parent, message);
                     return;
                 }
-                //landingPageForms land = new landingPageForms(null);
+                //create file
+                try {
+                    File credential = new File("usercredential.txt");
+
+                    if (credential.createNewFile()) {
+                        System.out.println("File created: " + credential.getName());
+
+                    } else {
+                        System.out.println("File already exists.");
+                    }
+                } catch (IOException error) {
+                    System.out.println("An error occurred.");
+                    error.printStackTrace();
+                }
+                try {
+                    FileWriter writer = new FileWriter("usercredential.txt");
+                    writer.write(Usernamevar+"\n");
+                    writer.write(Emailvar+"\n");
+                    writer.write(PasswordCvar+"\n");
+                    writer.close();
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
+
                 Login loginForm = new Login(null);
                 dispose();
             }
@@ -77,6 +105,15 @@ public class RegistrationForm extends JDialog {
         });
 
 
+        link.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                System.out.println("mouse clicked");
+                dispose();
+                Login login = new Login(null);
+            }
+        });
     }
 
     private void createUIComponents() {
