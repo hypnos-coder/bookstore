@@ -13,7 +13,9 @@
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <enabled value="false"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="98f43" class="javax.swing.JLabel" binding="headlabel">
@@ -21,7 +23,8 @@
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <font name="Gabriola" size="24" style="3"/>
+              <enabled value="true"/>
+              <font name="Consolas" size="48" style="1"/>
               <icon value="src/loginicon.png"/>
               <text value="Login"/>
             </properties>
@@ -41,7 +44,8 @@
                   <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <font name="Gabriola" size="24" style="3"/>
+                  <enabled value="true"/>
+                  <font name="Consolas" size="24" style="1"/>
                   <text value="Don't have an Account? sign up"/>
                 </properties>
               </component>
@@ -59,6 +63,8 @@
                     </constraints>
                     <properties>
                       <background color="-12478038"/>
+                      <enabled value="true"/>
+                      <font name="Consolas" size="24" style="1"/>
                       <text value="Ok"/>
                     </properties>
                   </component>
@@ -68,6 +74,8 @@
                     </constraints>
                     <properties>
                       <background color="-4500144"/>
+                      <enabled value="true"/>
+                      <font name="Consolas" size="24" style="1"/>
                       <text value="Cancel"/>
                     </properties>
                   </component>
@@ -87,7 +95,10 @@
                         <preferred-size width="150" height="-1"/>
                       </grid>
                     </constraints>
-                    <properties/>
+                    <properties>
+                      <enabled value="true"/>
+                      <font name="Consolas" size="18" style="1"/>
+                    </properties>
                   </component>
                   <component id="edb29" class="javax.swing.JPasswordField" binding="tfpassword">
                     <constraints>
@@ -95,14 +106,18 @@
                         <preferred-size width="150" height="-1"/>
                       </grid>
                     </constraints>
-                    <properties/>
+                    <properties>
+                      <enabled value="true"/>
+                      <font name="Consolas" size="18" style="1"/>
+                    </properties>
                   </component>
                   <component id="48cd9" class="javax.swing.JLabel" binding="username_email">
                     <constraints>
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <font name="Gabriola" size="24" style="3"/>
+                      <enabled value="true"/>
+                      <font name="Consolas" size="24" style="1"/>
                       <text value="Username/email"/>
                     </properties>
                   </component>
@@ -111,7 +126,8 @@
                       <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <font name="Gabriola" size="24" style="3"/>
+                      <enabled value="true"/>
+                      <font name="Consolas" size="24" style="1"/>
                       <text value="Password"/>
                     </properties>
                   </component>
