@@ -9,9 +9,9 @@ public class Main {
         //boolean test = authentification.login("amen","merbelle");
         //String test = authentification.register("hafsa9","hafsabadullahi1@gmail.com","password123","password123", "6123091958","ok lets go");
         //System.out.print(test);
-        //RegistrationForm registrationForm = new RegistrationForm(null);
+        RegistrationForm registrationForm = new RegistrationForm(null);
         //landingPageForms land = new landingPageForms(null);
-        //registrationForm.setVisible(true);
+        registrationForm.setVisible(true);
 
 
 
