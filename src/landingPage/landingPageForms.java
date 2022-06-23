@@ -22,7 +22,7 @@ public class landingPageForms extends JDialog{
     private JPanel book4;
     private JPanel book5;
     private JPanel book6;
-    private JLabel book1label;
+    private JLabel gameOfThronesGameLabel;
     private JLabel book2icon;
     private JLabel book1icon;
     private JLabel book3icon;
