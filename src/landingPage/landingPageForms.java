@@ -69,5 +69,19 @@ public class landingPageForms extends JDialog{
 
             }
         });
+        Abouticon.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                AboutPage aboutPage = new AboutPage(null);
+            }
+        });
+        abouticon.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                ContactUs contactUs = new ContactUs(null);
+            }
+        });
     }
 }

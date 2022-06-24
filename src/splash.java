@@ -15,7 +15,7 @@ public class splash extends JWindow {
         j.setBounds(((int) d.getWidth() - 500) / 2, ((int) d.getHeight() - 300) / 2, 500, 300);
         j.setVisible(true);
         try {
-            Thread.sleep(3000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

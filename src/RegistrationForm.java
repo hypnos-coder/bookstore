@@ -56,6 +56,11 @@ public class RegistrationForm extends JDialog {
                             PasswordCvar.isEmpty() || Mailingadressvar.isEmpty()){
                         message = "All field are required";
 
+                    } else if (!Emailvar.matches("^(.+)@(.+)$")) {
+                        message = "Enter a valid email address";
+                    }else if (PasswordCvar.length()<8 || Passwordvar.length()<8) {
+                        message = "Password length must be greater than 8";
+
                     }else {
                         message = authentification.register(Usernamevar, Emailvar, Passwordvar, PasswordCvar, PhoneNumvar, Mailingadressvar);
                     }
