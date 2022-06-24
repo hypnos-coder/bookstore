@@ -87,7 +87,7 @@ public class RegistrationForm extends JDialog {
                     FileWriter writer = new FileWriter("usercredential.txt");
                     writer.write(Usernamevar+"\n");
                     writer.write(Emailvar+"\n");
-                    writer.write(PasswordCvar+"\n");
+                    writer.write(authentification.encrypt(Passwordvar,"philomath")+"\n");
                     writer.close();
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);

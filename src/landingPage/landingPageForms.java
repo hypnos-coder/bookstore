@@ -2,6 +2,9 @@ package landingPage;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.io.File;
 
 public class landingPageForms extends JDialog{
     private JLabel Cartlbl;
@@ -42,11 +45,29 @@ public class landingPageForms extends JDialog{
         setTitle("Home Page");
         setMinimumSize(new Dimension(1400, 800));
         //setModal(true);
-        setVisible(true);
+        //setVisible(true);
         setLocationRelativeTo(parent);
         setContentPane(mainPanel);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
 
+        logoutlbl.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                int answer = JOptionPane.showConfirmDialog(null,
+                        "Are you sure, you want to sign out?", "Logout confirmation",
+                        JOptionPane.YES_NO_OPTION);
+
+                if (answer == JOptionPane.NO_OPTION) {
+                    // do something
+                } else if(answer == JOptionPane.YES_OPTION) {
+                    File credential = new File("usercredential.txt");
+                    credential.delete();
+                    dispose();
+                }
+
+            }
+        });
     }
 }

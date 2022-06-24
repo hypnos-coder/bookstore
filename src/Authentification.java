@@ -1,37 +1,19 @@
-import javax.crypto.Cipher;
+import javax.crypto.*;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
 
+import java.io.UnsupportedEncodingException;
 import java.security.*;
 import java.sql.*;
+import java.util.Arrays;
+import java.util.Base64;
 
 public class Authentification {
+    private static SecretKeySpec secretKey;
+    private static byte[] key;
 
     //created a method to give us access to the querry each time we call 'connexion'
-    public String encription(String password) throws Exception {
-        //Creating a Signature object
-        Signature sign = Signature.getInstance("SHA256withRSA");
 
-        //Creating KeyPair generator object
-        KeyPairGenerator keyPairGen = KeyPairGenerator.getInstance("RSA");
-
-        //Initializing the key pair generator
-        keyPairGen.initialize(2048);
-
-        //Generating the pair of keys
-        KeyPair pair = keyPairGen.generateKeyPair();
-
-        //Creating a Cipher object
-        Cipher cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
-
-        //Initializing a Cipher object
-        cipher.init(Cipher.ENCRYPT_MODE, pair.getPublic());
-
-        //Adding data to the cipher
-        byte[] input = password.getBytes();
-        cipher.update(input);
-        byte[] cipherText = cipher.doFinal();
-
-        return cipherText.toString();
-    }
     public Connection Connexion() throws SQLException, ClassNotFoundException {
         Class.forName("com.mysql.cj.jdbc.Driver");
 
@@ -51,7 +33,7 @@ public class Authentification {
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1,username_email);
         statement.setString(2,username_email);
-        statement.setString(3,password);
+        statement.setString(3,encrypt(password,"philomath"));
 /// no need to call query when using prepared statement
         ResultSet resultSet = statement.executeQuery();
         // if statement that checks if the user is registered and returns true if username_email and password match
@@ -90,7 +72,7 @@ public class Authentification {
          String query = "insert into userdb values (?,?,?,?,?)";
          statement = connection.prepareStatement(query);
          statement.setString(1,Username);
-         statement.setString(2,Password);
+         statement.setString(2,encrypt(Password,"philomath"));
 
          statement.setString(3,PhoneNumber);
          statement.setString(4,Email);
@@ -99,25 +81,43 @@ public class Authentification {
 
         System.out.println("here");
         return "successfully registered";
+    }
+    public static void setKey(final String myKey) {
+        MessageDigest sha = null;
+        try {
+            key = myKey.getBytes("UTF-8");
+            sha = MessageDigest.getInstance("SHA-1");
+            key = sha.digest(key);
+            key = Arrays.copyOf(key, 16);
+            secretKey = new SecretKeySpec(key, "AES");
+        } catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+    }
 
+    public static String encrypt(final String strToEncrypt, final String secret) {
+        try {
+            setKey(secret);
+            Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
+            cipher.init(Cipher.ENCRYPT_MODE, secretKey);
+            return Base64.getEncoder()
+                    .encodeToString(cipher.doFinal(strToEncrypt.getBytes("UTF-8")));
+        } catch (Exception e) {
+            System.out.println("Error while encrypting: " + e.toString());
+        }
+        return null;
+    }
 
-
-
+    public static String decrypt(final String strToDecrypt, final String secret) {
+        try {
+            setKey(secret);
+            Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5PADDING");
+            cipher.init(Cipher.DECRYPT_MODE, secretKey);
+            return new String(cipher.doFinal(Base64.getDecoder()
+                    .decode(strToDecrypt)));
+        } catch (Exception e) {
+            System.out.println("Error while decrypting: " + e.toString());
+        }
+        return null;
     }
 }
-/*
-* Class.forName("com.mysql.cj.jdbc.Driver");
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/college","root","merbelle");
-        Statement statement = connection.createStatement();
-        ResultSet resultSet = statement.executeQuery("select *from student");
-        while (resultSet.next())
-            System.out.println(resultSet.getString(1)+
-                    "\t"+resultSet.getString(2)
-                    +"\t"+resultSet.getString(3)
-                    +"\t"+resultSet.getString(4)
-                    +"\t"+resultSet.getString(5)
-                    +"\t"+resultSet.getString(6)
-                    +"\t"+resultSet.getString(7)
-                    +"\t"+resultSet.getString(8));
-        connection.close();
-        System.out.println(System.getProperty("user.name"));*/

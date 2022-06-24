@@ -6,6 +6,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.sql.SQLException;
 
 public class Login extends JDialog{
@@ -25,7 +28,7 @@ public class Login extends JDialog{
 
     public Login(JFrame parent){
         super(parent);
-        setTitle("Create A New Account");
+        setTitle("Login");
         setContentPane(signinpanel);
         //setPreferredSize(new Dimension(800, 800));
         setMinimumSize(new Dimension(600, 400));
@@ -61,8 +64,31 @@ public class Login extends JDialog{
                     JOptionPane.showMessageDialog(parent, message);
                     return;
                 }
+                try {
+                    File credential = new File("usercredential.txt");
+
+                    if (credential.createNewFile()) {
+                        System.out.println("File created: " + credential.getName());
+
+                    } else {
+                        System.out.println("File already exists.");
+                    }
+                } catch (IOException error) {
+                    System.out.println("An error occurred.");
+                    error.printStackTrace();
+                }
+                try {
+                    FileWriter writer = new FileWriter("usercredential.txt");
+                    writer.write(usernamevar+"\n");
+
+                    writer.write(authentification.encrypt(passwordvar,"philomath")+"\n");
+                    writer.close();
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
                 dispose();
                 landingPageForms land = new landingPageForms(null);
+                land.setVisible(true);
 
             }
 
