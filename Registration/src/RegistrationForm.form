@@ -183,7 +183,7 @@
         <properties>
           <background color="-4857094"/>
           <enabled value="true"/>
-          <icon value="src/books-removebg-preview.png"/>
+          <icon value="images/books-removebg-preview.png"/>
           <text value="     "/>
         </properties>
       </component>

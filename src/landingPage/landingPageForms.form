@@ -67,7 +67,7 @@
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <icon value="src/search.png"/>
+                  <icon value="images/search.png"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -114,7 +114,7 @@
             </constraints>
             <properties>
               <font name="Dubai Medium" size="14" style="0"/>
-              <icon value="src/user.png"/>
+              <icon value="images/user.png"/>
               <text value="Profile"/>
             </properties>
           </component>
@@ -161,7 +161,7 @@
               <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="3" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <icon value="src/info.png"/>
+              <icon value="images/info.png"/>
               <text value="About"/>
             </properties>
           </component>
@@ -170,7 +170,7 @@
               <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="3" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <icon value="src/email.png"/>
+              <icon value="images/email.png"/>
               <text value="Contact Us"/>
             </properties>
           </component>
@@ -205,7 +205,7 @@
                 </constraints>
                 <properties>
                   <horizontalAlignment value="10"/>
-                  <icon value="src/gameofthornes.jpg"/>
+                  <icon value="images/gameofthornes.jpg"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -227,7 +227,7 @@
                 </constraints>
                 <properties>
                   <horizontalTextPosition value="10"/>
-                  <icon value="src/onestar.png"/>
+                  <icon value="images/onestar.png"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -236,7 +236,7 @@
                   <grid row="3" column="4" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <icon value="src/onestar.png"/>
+                  <icon value="images/onestar.png"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -245,7 +245,7 @@
                   <grid row="3" column="2" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <icon value="src/onestar.png"/>
+                  <icon value="images/onestar.png"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -254,7 +254,7 @@
                   <grid row="3" column="3" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <icon value="src/onestar.png"/>
+                  <icon value="images/onestar.png"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -290,7 +290,7 @@
                   <grid row="0" column="1" row-span="1" col-span="5" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <icon value="src/foolmonet.jpg"/>
+                  <icon value="images/foolmonet.jpg"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -309,7 +309,7 @@
                   <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <icon value="src/onestar.png"/>
+                  <icon value="images/onestar.png"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -318,7 +318,7 @@
                   <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <icon value="src/onestar.png"/>
+                  <icon value="images/onestar.png"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -327,7 +327,7 @@
                   <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <icon value="src/onestar.png"/>
+                  <icon value="images/onestar.png"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -336,7 +336,7 @@
                   <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <icon value="src/onestar.png"/>
+                  <icon value="images/onestar.png"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -345,7 +345,7 @@
                   <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <icon value="src/onestar.png"/>
+                  <icon value="images/onestar.png"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -376,7 +376,7 @@
                   <grid row="0" column="1" row-span="1" col-span="6" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <icon value="src/clashofking.jpg"/>
+                  <icon value="images/clashofking.jpg"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -395,7 +395,7 @@
                   <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <icon value="src/onestar.png"/>
+                  <icon value="images/onestar.png"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -404,7 +404,7 @@
                   <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <icon value="src/onestar.png"/>
+                  <icon value="images/onestar.png"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -423,7 +423,7 @@
                   <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <icon value="src/onestar.png"/>
+                  <icon value="images/onestar.png"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -432,7 +432,7 @@
                   <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <icon value="src/halfstar.png"/>
+                  <icon value="images/halfstar.png"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -441,7 +441,7 @@
                   <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <icon value="src/onestar.png"/>
+                  <icon value="images/onestar.png"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -462,7 +462,7 @@
                   <grid row="0" column="1" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <icon value="src/vampirehunter.jpg"/>
+                  <icon value="images/vampirehunter.jpg"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -481,7 +481,7 @@
                   <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <icon value="src/onestar.png"/>
+                  <icon value="images/onestar.png"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -490,7 +490,7 @@
                   <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <icon value="src/onestar.png"/>
+                  <icon value="images/onestar.png"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -499,7 +499,7 @@
                   <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <icon value="src/onestar.png"/>
+                  <icon value="images/onestar.png"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -508,7 +508,7 @@
                   <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <icon value="src/onestar.png"/>
+                  <icon value="images/onestar.png"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -540,7 +540,7 @@
                   <grid row="0" column="1" row-span="1" col-span="5" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <icon value="src/degreofmastery.jpg"/>
+                  <icon value="images/degreofmastery.jpg"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -559,7 +559,7 @@
                   <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <icon value="src/onestar.png"/>
+                  <icon value="images/onestar.png"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -568,7 +568,7 @@
                   <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <icon value="src/onestar.png"/>
+                  <icon value="images/onestar.png"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -577,7 +577,7 @@
                   <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <icon value="src/onestar.png"/>
+                  <icon value="images/onestar.png"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -586,7 +586,7 @@
                   <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <icon value="src/onestar.png"/>
+                  <icon value="images/onestar.png"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -618,7 +618,7 @@
                   <grid row="0" column="1" row-span="1" col-span="5" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <icon value="src/stormofsword.jpg"/>
+                  <icon value="images/stormofsword.jpg"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -637,7 +637,7 @@
                   <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <icon value="src/onestar.png"/>
+                  <icon value="images/onestar.png"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -646,7 +646,7 @@
                   <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <icon value="src/onestar.png"/>
+                  <icon value="images/onestar.png"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -655,7 +655,7 @@
                   <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <icon value="src/onestar.png"/>
+                  <icon value="images/onestar.png"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -664,7 +664,7 @@
                   <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <icon value="src/onestar.png"/>
+                  <icon value="images/onestar.png"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -673,7 +673,7 @@
                   <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <icon value="src/onestar.png"/>
+                  <icon value="images/onestar.png"/>
                   <text value=""/>
                 </properties>
               </component>

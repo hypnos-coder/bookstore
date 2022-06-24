@@ -7,7 +7,7 @@ public class splash extends JWindow {
 
         Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
 
-        Icon img = new ImageIcon(this.getClass().getResource("book-school.gif"));
+        Icon img = new ImageIcon(this.getClass().getResource("images/book-school.gif"));
         JLabel label = new JLabel(img);
 
         j.getContentPane().add(label);

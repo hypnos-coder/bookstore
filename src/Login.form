@@ -25,7 +25,7 @@
             <properties>
               <enabled value="true"/>
               <font name="Consolas" size="48" style="1"/>
-              <icon value="src/loginicon.png"/>
+              <icon value="images/loginicon.png"/>
               <text value="Login"/>
             </properties>
           </component>

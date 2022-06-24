@@ -18,7 +18,7 @@ public class ContactUs extends JDialog {
         //setPreferredSize(new Dimension(800, 800));
         setMinimumSize(new Dimension(600, 400));
         setVisible(true);
-        setModal(true);
+        //setModal(true);
         setLocationRelativeTo(parent);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         sendicon.addMouseListener(new MouseAdapter() {
@@ -26,6 +26,7 @@ public class ContactUs extends JDialog {
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 JOptionPane.showMessageDialog(parent, "Comment sent successfully ");
+                dispose();
             }
         });
     }
