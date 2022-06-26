@@ -13,7 +13,7 @@ public class ContactUs extends JDialog {
 
     public ContactUs(JFrame parent){
         super(parent);
-        setTitle("Login");
+        setTitle("Contact Us");
         setContentPane(main);
         //setPreferredSize(new Dimension(800, 800));
         setMinimumSize(new Dimension(600, 400));

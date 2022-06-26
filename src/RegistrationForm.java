@@ -13,7 +13,7 @@ import java.sql.*;
 
 
 
-public class RegistrationForm extends JDialog {
+public class RegistrationForm extends JFrame {
     private JTextField tfUsername;
     private JTextField tfPhoneNumber;
     private JTextField tfEmail;
@@ -27,13 +27,13 @@ public class RegistrationForm extends JDialog {
     private JLabel link;
 
     public RegistrationForm(JFrame parent) {
-        super(parent);
+        //super(parent);
         setTitle("Create A New Account");
         setContentPane(RegisterPanel);
         //setPreferredSize(new Dimension(800, 800));
         setMinimumSize(new Dimension(900, 800));
 
-        setModal(true);
+        //setModal(true);
         setLocationRelativeTo(parent);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         //setVisible(true);
@@ -92,6 +92,8 @@ public class RegistrationForm extends JDialog {
                     FileWriter writer = new FileWriter("usercredential.txt");
                     writer.write(Usernamevar+"\n");
                     writer.write(Emailvar+"\n");
+                    writer.write(PhoneNumvar+"\n");
+                    writer.write(Mailingadressvar+"\n");
                     writer.write(authentification.encrypt(Passwordvar,"philomath")+"\n");
                     writer.close();
                 } catch (IOException ex) {

@@ -11,7 +11,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class Login extends JDialog{
+public class Login extends JFrame{
     private JPanel signinpanel;
     private JPanel head;
     private JLabel headlabel;
@@ -27,13 +27,13 @@ public class Login extends JDialog{
     private JPanel buttonfield;
 
     public Login(JFrame parent){
-        super(parent);
+        //super(parent);
         setTitle("Login");
         setContentPane(signinpanel);
         //setPreferredSize(new Dimension(800, 800));
         setMinimumSize(new Dimension(600, 400));
         setVisible(true);
-        setModal(true);
+       // setModal(true);
         setLocationRelativeTo(parent);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 

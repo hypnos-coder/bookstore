@@ -16,7 +16,6 @@ import java.security.NoSuchAlgorithmException;
 public class Main {
     public static void main(String[] args) throws Exception {
        splash s = new splash();
-
         File credential = new File("usercredential.txt");
         if (credential.exists()){
             landingPageForms landingPageForms = new landingPageForms(null);
@@ -25,19 +24,5 @@ public class Main {
         else {
             Login login = new Login(null);
         }
-//        Authentification authentification = new Authentification();
-//        String input = "baeldung";
-//
-//        String cipherText = authentification.encrypt(input,"scdp");
-//        String plainText = authentification.decrypt(cipherText,"scdp");
-//
-//        System.out.println(cipherText);
-//        System.out.println(plainText);
-        //SplashPage splashPage = new SplashPage();
-
-
-
-
-
     }
 }

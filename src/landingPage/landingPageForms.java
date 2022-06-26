@@ -6,7 +6,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
 
-public class landingPageForms extends JDialog{
+public class landingPageForms extends JFrame{
     private JLabel Cartlbl;
     private JLabel logoutlbl;
     private JLabel profilelbl;
@@ -39,9 +39,10 @@ public class landingPageForms extends JDialog{
     private JLabel Abouticon;
     private JLabel abouticon;
     private JLabel book6icon;
+    private JLabel homeicon;
 
     public landingPageForms(JFrame parent) {
-        super(parent);
+        //super(parent);
         setTitle("Home Page");
         setMinimumSize(new Dimension(1400, 800));
         //setModal(true);
@@ -81,6 +82,24 @@ public class landingPageForms extends JDialog{
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 ContactUs contactUs = new ContactUs(null);
+            }
+        });
+        homeicon.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+//                System.out.println("click");
+
+
+            }
+        });
+        profilelbl.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                Profil profil = new Profil("","","","");
+                profil.setVisible(true);
+                dispose();
             }
         });
     }

@@ -9,7 +9,7 @@ public class AboutPage extends JDialog {
     private JTextPane thisProjectIsTheTextPane;
     public AboutPage(JFrame parent){
         super(parent);
-        setTitle("Login");
+        setTitle("About");
         setContentPane(main);
         //setPreferredSize(new Dimension(800, 800));
         setMinimumSize(new Dimension(600, 400));
